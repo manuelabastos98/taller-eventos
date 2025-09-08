@@ -1,9 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    div = document.getElementsByTagName("div")[0];
-    div.addEventListener("click", holasoyeldiv)
+    let boton = document.getElementsByTagName("button")[0];
+    let div = document.getElementsByTagName("div")[0];
 
-function holasoyeldiv() {
+    boton.addEventListener("click", saludar);
+    div.addEventListener("click", holasoyeldiv);
+
+    function saludar(event) {
+        event.stopPropagation(); 
+        alert("Hola!");
+    }
+
+    function holasoyeldiv() {
     alert("Hola! Soy el div");
-}
+    }
+
 });
